@@ -17,9 +17,24 @@
             double a= 45;
             double soma = a+100;
             String nome= request.getParameter("nome");
+            String login = request.getParameter("login");
+            String senha = request.getParameter("senha");
+    if(login!=null)        
+    if (login.equals("admin") && senha.equals("admin")) { %>
+            <i style="color:green">Você logou</i>  
+        <% } else { %>
+            <i style="color:red">Você não tem acesso</i>  
+        <% }
         %>
         <h1>Hello World! <%= m %></h1>
-        <h1>Você também  <%= nome %></h1>
-        <p><%= soma%></p>
+        <form action="" method="post">
+            <label>Login:</label>
+            <input type="text" name="login" />
+            <br>
+             <label>Senha</label>
+            <input type="password" name="senha" />
+            <button type="submit">LOGAR</button>
+        </form>
+       
     </body>
 </html>
