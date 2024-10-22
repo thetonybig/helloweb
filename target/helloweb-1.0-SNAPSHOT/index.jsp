@@ -1,10 +1,6 @@
-<%-- 
-    Document   : index
-    Created on : 24 de set. de 2024, 20:57:15
-    Author     : Estudante
---%>
-
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1" 
+    pageEncoding="UTF-8"%>
+<%@page import="beans.Estudante"%> 
 <!DOCTYPE html>
 <html>
     <head>
@@ -35,6 +31,11 @@
             <input type="password" name="senha" />
             <button type="submit">LOGAR</button>
         </form>
-       
+        <%
+            Estudante cadu = new Estudante(100,"Carlos Eduardo","67999888","cadux@gmail.com");
+        %>
+        <ul>
+            <li><%= cadu.getNome() %></li>
+        </ul>
     </body>
 </html>
