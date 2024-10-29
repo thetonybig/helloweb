@@ -12,6 +12,13 @@ public class Estudante {
     private String celular;
     private String email;
 
+    @Override
+    public String toString() {
+        return this.nome;
+    }
+
+    public Estudante() {
+    }
     public Estudante(int id, String nome, String celular, String email) {
         this.id = id;
         this.nome = nome;
